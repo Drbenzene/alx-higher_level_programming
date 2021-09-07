@@ -4,14 +4,13 @@ for i in range(0, 90):
 
         tens = i / 10
 
-            mod = i % 10
+        mod = i % 10
 
-    if mod > tens:
+        if mod > tens:
 
-                            if i != 89:
+                if i != 89:
 
-                                            print("{}".format('%02d' % i), end=", ")
+                        print("{}".format('%02d' % i), end=", ")
 
-                                                    else:
-
-                                                                    print("{}".format('%02d' % i))
+                else:
+                        print("{}".format('%02d' % i))
