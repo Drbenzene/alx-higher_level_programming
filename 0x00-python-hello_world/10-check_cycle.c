@@ -1,38 +1,61 @@
 #include "lists.h"
+
 /**
- * check_cycle - checks if a singly lined list has a cycle
- * @list: the list we're referring to
- * Return: 0 if there is no cycle, 1 if there is a cycle
+ * print_listint - prints all elements of a listint_t list
+ * @h: pointer to head of list
+ * Return: number of nodes
  */
-
-int check_cycle(listint_t *list)
-
+size_t print_listint(const listint_t *h)
 {
+	const listint_t *current;
+	unsigned int n; /* number of nodes */
 
-  listint_t *first = NULL;
+	current = h;
+	n = 0;
+	while (current != NULL)
+	{
+		printf("%i\n", current->n);
+		current = current->next;
+		n++;
+	}
 
-  if (list == NULL)
+	return (n);
+}
 
-    return (0);
+/**
+ * add_nodeint - adds a new node at the beginning of a listint_t list
+ * @head: pointer to a pointer of the start of the list
+ * @n: integer to be included in node
+ * Return: address of the new element or NULL if it fails
+ */
+listint_t *add_nodeint(listint_t **head, const int n)
+{
+	listint_t *new;
 
-  first = list;
+	new = malloc(sizeof(listint_t));
+	if (new == NULL)
+		return (NULL);
 
-  if (first == NULL)
+	new->n = n;
+	new->next = *head;
+	*head = new;
 
-    return (0);
+	return (new);
+}
 
-  while (list->next != NULL)
+/**
+ * free_listint - frees a listint_t list
+ * @head: pointer to list to be freed
+ * Return: void
+ */
+void free_listint(listint_t *head)
+{
+	listint_t *current;
 
-    {
-
-      if (list->next == first)
-
-	return (1);
-
-      list = list->next;
-
-    }
-
-  return (0);
-
+	while (head != NULL)
+	{
+		current = head;
+		head = head->next;
+		free(current);
+	}
 }
