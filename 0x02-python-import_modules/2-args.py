@@ -1,14 +1,15 @@
 #!/usr/bin/python3
 import sys
 def main(argv):
-    if len(argv) - 1 == 0:
+    count = len(sys.argv) - 1
+    if count == 0:
         print("0 arguments")
-    elif len(argv) - 1 == 1:
-        print("{} arguments: ".format(len(argv) - 1)
+    elif count == 1:
+        print("1 arguments: ")
     else:
-        print("{}: {}".format(len(argv) - 1, argv[])
-        for i, x in enumerate(argv[1:], 1):
-              print("{:d}: {}".format(i, x))
+        print("{} arguments".format(count)
+        for i in range(count):
+              print("{}: {}".format(i + 1, sys.argv[i + 1]))
 
 if __name__ == "__main__":
     import sys
