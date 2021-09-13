@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 def main():
     """Print some of 1 and 2"""
     from add_0 import add
