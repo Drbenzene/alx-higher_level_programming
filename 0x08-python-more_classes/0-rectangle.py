@@ -2,5 +2,6 @@
 """Define a rectangle"""
 
 class Rectangle:
-    """ Represent a Rectangle"""
+    """Represent a Rectangle"""
     pass
+
