@@ -9,7 +9,7 @@ def add_integer(a, b=98):
     Args:
     a: is a integer
     b: is a integer
-    Return is the sum of (a + b)
+    Return is the sum of the int (a + b)
     """
 
     if not isinstance(a, (int, float)):
