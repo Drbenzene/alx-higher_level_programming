@@ -1,4 +1,4 @@
-#!usr/bin/pyton3
+#!/usr/bin/python3
 """Divide all elements of a matrix"""
 
 error = "matrix must be a matrix (list of lists) of integers/floats"

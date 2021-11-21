@@ -1,4 +1,4 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
 """Function that prints a square"""
 
 def print_square(size):
