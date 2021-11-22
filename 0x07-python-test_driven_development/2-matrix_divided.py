@@ -31,7 +31,6 @@ def validate_matrix(matrix):
             for jdx in idx:
                 if not isinstance(jdx, (int, float)):
                     raise(error)
-
         
 def validate_div(div):
     """Validate cases div"""
